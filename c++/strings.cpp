@@ -37,9 +37,22 @@ int main(){
 	char ch[15];
 	str.copy(ch, 14, 0);
 	cout<<ch<<endl;
-	string str1 = "james bond";
+	string str1 = "h";
 	//swap function is used for swaping the two arrays
 	str.swap(str1);
+	//compare() function returns the difference of two strings in integer
+	cout<<str.compare(str1);
+	//find() function searches for the first occurence of the substring in the string
+	// cout<<str.find("james");
+	//rfind() function return the last occurence of the string
+	// cout<<str.rfind("james");
+	//insert() functions insert the given substring in the string
+	str1.insert(5, "arrays");
+	//clear() functions clears the strings
+	str.clear();
+	//empty() function checks if the string is empty or not
+	str.empty();	
+
 	cout<<str<<endl;
 	cout<<str1<<endl;
 	return 0;
