@@ -1,0 +1,25 @@
+Space allocation before swapon  
+              total        used        free      shared  buff/cache   available
+Mem:           1.8G        150M        742M        368K         59M        1.5G
+Swap:          0B         0B        0B
+
+Space allocation after swap on
+              total        used        free      shared  buff/cache   available
+Mem:            863          61         741           0          60         693
+Swap:           819          98         721
+
+Here swap allocated in the hard disk to be 819M and can be used if program exceeds the Ram memory which is 1.5G
+
+memleak.c out
+14 iterations
+
+vmstat -t 1 output:
+
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- -----timestamp-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st                 EDT
+ 0  0 100692 759748      0  61656    1  157   130   159   42   76  0  0 99  1  0 2019-04-23 14:14:50
+ 0  0 100692 759748      0  61656    0    0     0     0   20   25  0  0 100  0  0 2019-04-23 14:14:51
+ 0  0 100688 759600      0  61740    0    0    68     0   12   21  0  0 99  1  0 2019-04-23 14:14:52
+ 0  0 100688 759600      0  61740    0    0     0     0   13   20  0  0 100  0  0 2019-04-23 14:14:53
+ 0  0 100688 759600      0  61740    0    0     0     0   10   18  0  0 100  0  0 2019-04-23 14:14:54
+ 0  0 100688 759600      0  61740    0    0     0     0   15   19  0  1 99  0  0 2019-04-23 14:14:55

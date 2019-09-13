@@ -1,0 +1,19 @@
+00400000-00401000 r-xp 00000000 08:08 19104313                           /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module08-mmap/mmap_private
+00600000-00601000 r--p 00000000 08:08 19104313                           /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module08-mmap/mmap_private
+00601000-00602000 rw-p 00001000 08:08 19104313                           /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module08-mmap/mmap_private
+00731000-00752000 rw-p 00000000 00:00 0                                  [heap]
+7f006754d000-7f0067714000 r-xp 00000000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f0067714000-7f0067914000 ---p 001c7000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f0067914000-7f0067918000 r--p 001c7000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f0067918000-7f006791a000 rw-p 001cb000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f006791a000-7f006791e000 rw-p 00000000 00:00 0 
+7f006791e000-7f0067945000 r-xp 00000000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7f0067a23000-7f0067b23000 rw-p 00000000 08:08 19104306                   /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module08-mmap/1mfile
+7f0067b23000-7f0067b26000 rw-p 00000000 00:00 0 
+7f0067b42000-7f0067b44000 rw-p 00000000 00:00 0 
+7f0067b44000-7f0067b45000 r--p 00026000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7f0067b45000-7f0067b47000 rw-p 00027000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7fffaec00000-7fffaec21000 rw-p 00000000 00:00 0                          [stack]
+7fffaedd4000-7fffaedd6000 r--p 00000000 00:00 0                          [vvar]
+7fffaedd6000-7fffaedd8000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]

@@ -1,0 +1,2 @@
+Average wait time of CAS : 6.240000
+Worst time of CAS - Bounded : 39.000000

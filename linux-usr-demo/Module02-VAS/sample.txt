@@ -1,0 +1,249 @@
+[maruthisi@playpen Module2]$ ./sample 
+Hello
+
+[maruthisi@playpen Module2]$ ./sample 
+Hello
+
+[maruthisi@playpen Module2]$ pidof sample
+7282 7244
+
+[maruthisi@playpen Module2]$ cat /proc/7244/status
+Name:	sample
+Umask:	0002
+State:	S (sleeping)
+Tgid:	7244
+Ngid:	0
+Pid:	7244
+PPid:	6766
+TracerPid:	0
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+FDSize:	256
+Groups:	1000 
+NStgid:	7244
+NSpid:	7244
+NSpgid:	7244
+NSsid:	6766
+VmPeak:	    4388 kB
+VmSize:	    4388 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	     712 kB
+VmRSS:	     712 kB
+RssAnon:	      72 kB
+RssFile:	     640 kB
+RssShmem:	       0 kB
+VmData:	     188 kB
+VmStk:	     132 kB
+VmExe:	       4 kB
+VmLib:	    1984 kB
+VmPTE:	      32 kB
+VmPMD:	      12 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+Threads:	1
+SigQ:	0/14857
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000000000
+SigCgt:	0000000000000000
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Cpus_allowed:	f
+Cpus_allowed_list:	0-3
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	2
+nonvoluntary_ctxt_switches:	1
+
+[maruthisi@playpen Module2]$ cat /proc/7244/maps
+00400000-00401000 r-xp 00000000 08:08 537602849                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module2/sample
+00600000-00601000 r--p 00000000 08:08 537602849                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module2/sample
+00601000-00602000 rw-p 00001000 08:08 537602849                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module2/sample
+00ca3000-00cc4000 rw-p 00000000 00:00 0                                  [heap]
+7f2b378d7000-7f2b37a9e000 r-xp 00000000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f2b37a9e000-7f2b37c9e000 ---p 001c7000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f2b37c9e000-7f2b37ca2000 r--p 001c7000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f2b37ca2000-7f2b37ca4000 rw-p 001cb000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f2b37ca4000-7f2b37ca8000 rw-p 00000000 00:00 0 
+7f2b37ca8000-7f2b37ccf000 r-xp 00000000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7f2b37ead000-7f2b37eb0000 rw-p 00000000 00:00 0 
+7f2b37ecc000-7f2b37ece000 rw-p 00000000 00:00 0 
+7f2b37ece000-7f2b37ecf000 r--p 00026000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7f2b37ecf000-7f2b37ed1000 rw-p 00027000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7ffcd694e000-7ffcd696f000 rw-p 00000000 00:00 0                          [stack]
+7ffcd699c000-7ffcd699e000 r--p 00000000 00:00 0                          [vvar]
+7ffcd699e000-7ffcd69a0000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+[root@playpen Module2]# cat /proc/7282/maps
+00400000-00401000 r-xp 00000000 08:08 537602849                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module2/sample
+00600000-00601000 r--p 00000000 08:08 537602849                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module2/sample
+00601000-00602000 rw-p 00001000 08:08 537602849                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module2/sample
+01bf4000-01c15000 rw-p 00000000 00:00 0                                  [heap]
+7fad938e4000-7fad93aab000 r-xp 00000000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7fad93aab000-7fad93cab000 ---p 001c7000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7fad93cab000-7fad93caf000 r--p 001c7000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7fad93caf000-7fad93cb1000 rw-p 001cb000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7fad93cb1000-7fad93cb5000 rw-p 00000000 00:00 0 
+7fad93cb5000-7fad93cdc000 r-xp 00000000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7fad93eba000-7fad93ebd000 rw-p 00000000 00:00 0 
+7fad93ed9000-7fad93edb000 rw-p 00000000 00:00 0 
+7fad93edb000-7fad93edc000 r--p 00026000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7fad93edc000-7fad93ede000 rw-p 00027000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7fffbe51b000-7fffbe53c000 rw-p 00000000 00:00 0                          [stack]
+7fffbe59b000-7fffbe59d000 r--p 00000000 00:00 0                          [vvar]
+7fffbe59d000-7fffbe59f000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+[maruthisi@playpen Module2]$ cat /proc/7282/status
+Name:	sample
+Umask:	0002
+State:	S (sleeping)
+Tgid:	7282
+Ngid:	0
+Pid:	7282
+PPid:	7247
+TracerPid:	0
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+FDSize:	256
+Groups:	1000 
+NStgid:	7282
+NSpid:	7282
+NSpgid:	7282
+NSsid:	7247
+VmPeak:	    4388 kB
+VmSize:	    4388 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	     656 kB
+VmRSS:	     656 kB
+RssAnon:	      68 kB
+RssFile:	     588 kB
+RssShmem:	       0 kB
+VmData:	     188 kB
+VmStk:	     132 kB
+VmExe:	       4 kB
+VmLib:	    1984 kB
+VmPTE:	      32 kB
+VmPMD:	      12 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+Threads:	1
+SigQ:	0/14857
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000000000
+SigCgt:	0000000000000000
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Cpus_allowed:	f
+Cpus_allowed_list:	0-3
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	1
+nonvoluntary_ctxt_switches:	0
+
+CODE
+
+[root@playpen Module2]# ./pagemap 7244 00400000
+Big endian? 0
+Vaddr: 0x400000, Page_size: 4096, Entry_size: 8
+Reading /proc/7244/pagemap at 0x2000
+[0]0xc8 [1]0xcd [2]0x3 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa08000000003cdc8
+PFN: 0x3cdc8
+
+[root@playpen Module2]# ./pagemap 7282 00400000
+Big endian? 0
+Vaddr: 0x400000, Page_size: 4096, Entry_size: 8
+Reading /proc/7282/pagemap at 0x2000
+[0]0xc8 [1]0xcd [2]0x3 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa08000000003cdc8
+PFN: 0x3cdc8
+
+Literals
+
+[root@playpen Module2]# ./pagemap 7244 00600000
+Big endian? 0
+Vaddr: 0x600000, Page_size: 4096, Entry_size: 8
+Reading /proc/7244/pagemap at 0x3000
+[0]0xbc [1]0x10 [2]0xa [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x81800000000a10bc
+PFN: 0xa10bc
+[root@playpen Module2]# ./pagemap 7282 00600000
+Big endian? 0
+Vaddr: 0x600000, Page_size: 4096, Entry_size: 8
+Reading /proc/7282/pagemap at 0x3000
+[0]0xdb [1]0xc3 [2]0x7 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x818000000007c3db
+PFN: 0x7c3db
+
+
+Initialized data
+
+[root@playpen Module2]# ./pagemap 7244 00601000
+Big endian? 0
+Vaddr: 0x601000, Page_size: 4096, Entry_size: 8
+Reading /proc/7244/pagemap at 0x3008
+[0]0x8e [1]0x4c [2]0x5 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000054c8e
+PFN: 0x54c8e
+[root@playpen Module2]# ./pagemap 7282 00601000
+Big endian? 0
+Vaddr: 0x601000, Page_size: 4096, Entry_size: 8
+Reading /proc/7282/pagemap at 0x3008
+[0]0x98 [1]0x3a [2]0xd [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x81800000000d3a98
+PFN: 0xd3a98
+
+
+HEAP
+
+[root@playpen Module2]# ./pagemap 7244 00ca3000
+Big endian? 0
+Vaddr: 0xca3000, Page_size: 4096, Entry_size: 8
+Reading /proc/7244/pagemap at 0x6518
+[0]0xff [1]0xea [2]0x7 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x818000000007eaff
+PFN: 0x7eaff
+
+[root@playpen Module2]# ./pagemap 7282 01bf4000
+Big endian? 0
+Vaddr: 0x1bf4000, Page_size: 4096, Entry_size: 8
+Reading /proc/7282/pagemap at 0xdfa0
+[0]0xa6 [1]0x1 [2]0xc [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x81800000000c01a6
+PFN: 0xc01a6
+
+Libc code:
+
+[root@playpen Module2]# ./pagemap 7244 7f2b378d7000
+Big endian? 0
+Vaddr: 0x7f2b378d7000, Page_size: 4096, Entry_size: 8
+Reading /proc/7244/pagemap at 0x3f959bc6b8
+[0]0xae [1]0xf2 [2]0x10 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa08000000010f2ae
+PFN: 0x10f2ae
+
+[root@playpen Module2]# ./pagemap 7282 7fad938e4000
+Big endian? 0
+Vaddr: 0x7fad938e4000, Page_size: 4096, Entry_size: 8
+Reading /proc/7282/pagemap at 0x3fd6c9c720
+[0]0xae [1]0xf2 [2]0x10 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa08000000010f2ae
+PFN: 0x10f2ae
+

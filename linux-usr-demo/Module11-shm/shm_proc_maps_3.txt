@@ -1,0 +1,27 @@
+00400000-00401000 r-xp 00000000 08:08 537602894                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module11-shm/shm
+00600000-00601000 r--p 00000000 08:08 537602894                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module11-shm/shm
+00601000-00602000 rw-p 00001000 08:08 537602894                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module11-shm/shm
+010a9000-010ca000 rw-p 00000000 00:00 0                                  [heap]
+7f2321950000-7f2321969000 r-xp 00000000 08:06 101499267                  /usr/lib64/libpthread-2.25.so
+7f2321969000-7f2321b69000 ---p 00019000 08:06 101499267                  /usr/lib64/libpthread-2.25.so
+7f2321b69000-7f2321b6a000 r--p 00019000 08:06 101499267                  /usr/lib64/libpthread-2.25.so
+7f2321b6a000-7f2321b6b000 rw-p 0001a000 08:06 101499267                  /usr/lib64/libpthread-2.25.so
+7f2321b6b000-7f2321b6f000 rw-p 00000000 00:00 0 
+7f2321b6f000-7f2321d36000 r-xp 00000000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f2321d36000-7f2321f36000 ---p 001c7000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f2321f36000-7f2321f3a000 r--p 001c7000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f2321f3a000-7f2321f3c000 rw-p 001cb000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f2321f3c000-7f2321f40000 rw-p 00000000 00:00 0 
+7f2321f40000-7f2321f47000 r-xp 00000000 08:06 101795188                  /usr/lib64/librt-2.25.so
+7f2321f47000-7f2322146000 ---p 00007000 08:06 101795188                  /usr/lib64/librt-2.25.so
+7f2322146000-7f2322147000 r--p 00006000 08:06 101795188                  /usr/lib64/librt-2.25.so
+7f2322147000-7f2322148000 rw-p 00007000 08:06 101795188                  /usr/lib64/librt-2.25.so
+7f2322148000-7f232216f000 r-xp 00000000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7f232234e000-7f2322350000 rw-p 00000000 00:00 0 
+7f232236c000-7f232236e000 rw-p 00000000 00:00 0 
+7f232236e000-7f232236f000 r--p 00026000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7f232236f000-7f2322371000 rw-p 00027000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7ffe18389000-7ffe183aa000 rw-p 00000000 00:00 0                          [stack]
+7ffe183db000-7ffe183dd000 r--p 00000000 00:00 0                          [vvar]
+7ffe183dd000-7ffe183df000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]

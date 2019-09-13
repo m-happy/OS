@@ -1,0 +1,104 @@
+#########################################
+Output of "ps" command:
+   
+PID    PPID  CPU       TASK        ST  %MEM     VSZ    RSS  COMM
+      0      0   0  ffffffffa5018480  RU   0.0       0      0  [swapper/0]
+     1      0   0  ffff987a3dba8000  IN   0.6  128024   6516  systemd  
+   3680   3109   0  ffff987a3a055140  IN   0.5  158868   5740  sshd
+   3684   3680   0  ffff987a3a0530c0  IN   0.2  115440   2032  bash
+   3698   3684   0  ffff987a3a3d30c0  IN   0.0    4216    472  a.out
+   3699   3109   0  ffff987a3a3d6180  IN   0.5  158868   5740  sshd
+   3703   3699   0  ffff987a368b30c0  IN   0.2  115440   2024  bash
+   3716   3703   0  ffff987a3ca3a080  IN   0.0    4216    472  a.out
+   3717   3109   0  ffff987a3ca3c100  IN   0.5  158868   5740  sshd
+>  3721   3717   0  ffff987a36bf6180  RU   0.2  115440   2036  bash
+Process Id and informationand taks has been
+#########################################
+Output of "vm -m":
+
+PID: 3716   TASK: ffff987a3ca3a080  CPU: 0   COMMAND: "a.out"
+       MM               PGD          RSS    TOTAL_VM
+ffff987a3cbe92c0  ffff987a3b8e4000   472k    4216k  
+      VMA           START       END     FLAGS FILE
+ffff987a3bb9dbd0     400000     401000 8000875 /root/a.out
+ffff987a3bb9d5e8     600000     601000 8100871 /root/a.out
+ffff987a3bb9d288     601000     602000 8100873 /root/a.out
+ffff987a3bb9d000 7f6f41c76000 7f6f41e38000 8000075 /usr/lib64/libc-2.17.so
+ffff987a3bb9da20 7f6f41e38000 7f6f42038000 8000070 /usr/lib64/libc-2.17.so
+ffff987a3bb9dca8 7f6f42038000 7f6f4203c000 8100071 /usr/lib64/libc-2.17.so
+ffff987a3bb9d870 7f6f4203c000 7f6f4203e000 8100073 /usr/lib64/libc-2.17.so
+ffff987a3bb9d360 7f6f4203e000 7f6f42043000 8100073 
+ffff987a3bb9d798 7f6f42043000 7f6f42065000 8000875 /usr/lib64/ld-2.17.so
+ffff987a3bb9daf8 7f6f4225b000 7f6f4225e000 8100073 
+ffff987a3bb9d948 7f6f42261000 7f6f42264000 8100073 
+ffff987a3bb9de58 7f6f42264000 7f6f42265000 8100871 /usr/lib64/ld-2.17.so
+ffff987a3bb9d0d8 7f6f42265000 7f6f42266000 8100873 /usr/lib64/ld-2.17.so
+ffff987a3bb9d438 7f6f42266000 7f6f42267000 8100073 
+ffff987a3bb9dd80 7ffe4389d000 7ffe438be000 100173 
+ffff987a3bb9d6c0 7ffe439f3000 7ffe439f5000 8040075 
+PID: 3698   TASK: ffff987a3a3d30c0  CPU: 0   COMMAND: "a.out"
+       MM               PGD          RSS    TOTAL_VM
+ffff987a36978640  ffff987a3ba8e000   472k    4216k  
+      VMA           START       END     FLAGS FILE
+ffff987a3c8ba5e8     400000     401000 8000875 /root/a.out
+ffff987a3c8ba1b0     600000     601000 8100871 /root/a.out
+ffff987a3c8ba000     601000     602000 8100873 /root/a.out
+ffff987a3c8ba438 7f51e0dc7000 7f51e0f89000 8000075 /usr/lib64/libc-2.17.so
+ffff987a3c8ba948 7f51e0f89000 7f51e1189000 8000070 /usr/lib64/libc-2.17.so
+ffff987a3c8ba360 7f51e1189000 7f51e118d000 8100071 /usr/lib64/libc-2.17.so
+ffff987a3c8bae58 7f51e118d000 7f51e118f000 8100073 /usr/lib64/libc-2.17.so
+ffff987a3c8ba6c0 7f51e118f000 7f51e1194000 8100073 
+ffff987a3c8babd0 7f51e1194000 7f51e11b6000 8000875 /usr/lib64/ld-2.17.so
+ffff987a3c8ba0d8 7f51e13ac000 7f51e13af000 8100073 
+ffff987a3c8baca8 7f51e13b2000 7f51e13b5000 8100073 
+ffff987a3c8ba870 7f51e13b5000 7f51e13b6000 8100871 /usr/lib64/ld-2.17.so
+ffff987a35ef4798 7f51e13b6000 7f51e13b7000 8100873 /usr/lib64/ld-2.17.so
+ffff987a3c8bad80 7f51e13b7000 7f51e13b8000 8100073 
+ffff987a3c8ba510 7ffe17c77000 7ffe17c98000 100173 
+ffff987a3c8baaf8 7ffe17d24000 7ffe17d26000 8040075 
+#############################################################
+output of vm -p 3716
+PID: 3716   TASK: ffff987a3ca3a080  CPU: 0   COMMAND: "a.out"
+       MM               PGD          RSS    TOTAL_VM
+ffff987a3cbe92c0  ffff987a3b8e4000   472k    4216k  
+      VMA           START       END     FLAGS FILE
+ffff987a3bb9dbd0     400000     401000 8000875 /root/a.out
+VIRTUAL     PHYSICAL
+400000       cafd000
+      VMA           START       END     FLAGS FILE
+ffff987a3bb9d5e8     600000     601000 8100871 /root/a.out
+VIRTUAL     PHYSICAL
+600000       ccb9000
+      VMA           START       END     FLAGS FILE
+ffff987a3bb9d288     601000     602000 8100873 /root/a.out
+VIRTUAL     PHYSICAL
+601000       b8ec000
+      VMA           START       END     FLAGS FILE
+ffff987a3bb9d000 7f6f41c76000 7f6f41e38000 8000075 /usr/lib64/libc-2.17.so
+VIRTUAL     PHYSICAL
+7f6f41c76000  3fd2a000
+7f6f41c77000  3fd2b000
+7f6f41c78000  2b194000
+7f6f41c79000  2b195000
+7f6f41c7a000  3fb7a000
+7f6f41c7b000  3fb7b000
+7f6f41c7c000  2b540000
+7f6f41c7d000  2b541000
+7f6f41c7e000  2b542000
+7f6f41c7f000  2b543000
+7f6f41c80000  3fdf0000
+7f6f41c81000  3fdf1000
+7f6f41c82000  3fdf2000
+7f6f41c83000  3fdf3000
+7f6f41c84000  2b1a4000
+7f6f41c85000  2b1a5000
+7f6f41c86000  2b1a6000
+7f6f41c87000  2b1a7000
+7f6f41c88000  2adfd000
+7f6f41c89000  2adfe000
+7f6f41c8a000  2adff000
+7f6f41c8b000  3fb68000
+7f6f41c8c000  3fb69000
+7f6f41c8d000  3fb6a000
+
+some important mapping and offset is shown here..

@@ -1,0 +1,2 @@
+Average wait time of TAS : 6.084000
+Worst time of CAS - Bounded : 41.000000

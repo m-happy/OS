@@ -1,0 +1,32 @@
+Roll No.: CS17BTECH11018	
+Name: Happy Kumar
+
+--------------------------------------------------------------------------------
+
+P1: Chess
+---------
+Assumptions / Comments (if any):
+I made some changes in Makefile
+$	g++ -o p1.out lex.yy.c y.tab.c -lfl
+was changed to
+$	g++ -o p1.out lex.yy.c y.tab.c -lm -ll
+
+Because I was having some issues while compiling, I asked TA(Rohit Aggarwal) about this and he allowed.
+
+	
+# Is the program complete? Are there any assumptions made? Any other comments?
+yes the program is complete.
+
+Approach :
+# How do you solve this problem?
+p1.l is the lexer for the language given by chess board moves. The moves are represeted by turn and start symbol of the CFG is move. 
+
+P2: Calculator
+--------------
+Assumptions / Comments (if any):
+	
+# Is the program complete? Are there any assumptions made? Any other comments?
+NO. The dangling of if and else is not solved.
+Approach :
+# How do you solve this problem?
+all the part of the file starting with # are waste till newline. a file out.c is created and the all the necessary libraries files are included before starting of the lexer. as lexer starts INIT comes it starts and defines a while loop in the c program and then looks for identifier and other expression as defined in program .. eg. Select Delay and other variables. Whenever lexer finds an if it prints and if statement in c program and then looks for display after that if it expects an else.

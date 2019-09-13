@@ -1,0 +1,2 @@
+The average time for waiting it 1.103470
+The worst time for philosopher is 5.402000

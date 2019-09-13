@@ -1,0 +1,171 @@
+Process P1: processing time=20; deadline:50; period:50 joined the system at time 0
+Process P2: processing time=35; deadline:50; period:50 joined the system at time 0
+Process P3: processing time=45; deadline:70; period:70 joined the system at time 0
+Process P4: processing time=10; deadline:25; period:25 joined the system at time 0
+Process P5: processing time=16; deadline:30; period:30 joined the system at time 0
+Process P6: processing time=50; deadline:70; period:70 joined the system at time 0
+Process P7: processing time=40; deadline:55; period:55 joined the system at time 0
+Process P8: processing time=30; deadline:65; period:65 joined the system at time 0
+Process P9: processing time=15; deadline:28; period:28 joined the system at time 0
+Process P10: processing time=70; deadline:100; period:100 joined the system at time 0
+Process P4 starts execution at time 0.
+Process P4 finishes execution at time 10.
+Process P9 starts execution at time 10.
+Process P9 finishes execution at time 25.
+Process P4 starts execution at time 25.
+Deadline miss by Process5 at time 30
+Process P4 finishes execution at time 35.
+Process P9 starts execution at time 35.
+Process P9 finishes execution at time 50.
+Deadline miss by Process1 at time 50
+Deadline miss by Process2 at time 50
+Process P4 starts execution at time 50.
+Deadline miss by Process7 at time 55
+Process P4 finishes execution at time 60.
+Deadline miss by Process5 at time 60
+Process P9 starts execution at time 60.
+Deadline miss by Process8 at time 65
+Deadline miss by Process3 at time 70
+Deadline miss by Process6 at time 70
+Process P9 finishes execution at time 75.
+Process P4 starts execution at time 75.
+Process P4 finishes execution at time 85.
+Process P9 starts execution at time 85.
+Deadline miss by Process5 at time 90
+Process P9 finishes execution at time 100.
+Deadline miss by Process1 at time 100
+Deadline miss by Process2 at time 100
+Deadline miss by Process10 at time 100
+Process P4 starts execution at time 100.
+Process P4 finishes execution at time 110.
+Deadline miss by Process7 at time 110
+Process P5 starts execution at time 110.
+Process P5 is preempted by Process P9 at time 112. Remaining processing time:14
+Process P9 starts execution at time 112
+Deadline miss by Process5 at time 120
+Process P9 is preempted by Process P4 at time 125. Remaining processing time:2
+Process P4 starts execution at time 125
+Deadline miss by Process8 at time 130
+Process P4 finishes execution at time 135.
+Process P9 resumes execution at time 135.
+Process P9 finishes execution at time 137.
+Process P5 starts execution at time 137.
+Deadline miss by Process3 at time 140
+Deadline miss by Process6 at time 140
+Process P5 is preempted by Process P9 at time 140. Remaining processing time:13
+Process P9 starts execution at time 140
+Deadline miss by Process1 at time 150
+Deadline miss by Process2 at time 150
+Deadline miss by Process5 at time 150
+Process P9 is preempted by Process P4 at time 150. Remaining processing time:5
+Process P4 starts execution at time 150
+Process P4 finishes execution at time 160.
+Process P9 resumes execution at time 160.
+Process P9 finishes execution at time 165.
+Deadline miss by Process7 at time 165
+Process P5 starts execution at time 165.
+Process P5 is preempted by Process P9 at time 168. Remaining processing time:13
+Process P9 starts execution at time 168
+Process P9 is preempted by Process P4 at time 175. Remaining processing time:8
+Process P4 starts execution at time 175
+Deadline miss by Process5 at time 180
+Process P4 finishes execution at time 185.
+Process P9 resumes execution at time 185.
+Process P9 finishes execution at time 193.
+Process P5 starts execution at time 193.
+Deadline miss by Process8 at time 195
+Process P5 is preempted by Process P9 at time 196. Remaining processing time:13
+Process P9 starts execution at time 196
+Deadline miss by Process1 at time 200
+Deadline miss by Process2 at time 200
+Deadline miss by Process10 at time 200
+Process P9 is preempted by Process P4 at time 200. Remaining processing time:11
+Process P4 starts execution at time 200
+Process P4 finishes execution at time 210.
+Deadline miss by Process3 at time 210
+Deadline miss by Process5 at time 210
+Deadline miss by Process6 at time 210
+Process P9 resumes execution at time 210.
+Deadline miss by Process7 at time 220
+Process P9 finishes execution at time 221.
+Process P5 starts execution at time 221.
+Process P5 is preempted by Process P9 at time 224. Remaining processing time:13
+Process P9 starts execution at time 224
+Process P9 is preempted by Process P4 at time 225. Remaining processing time:14
+Process P4 starts execution at time 225
+Process P4 finishes execution at time 235.
+Process P9 resumes execution at time 235.
+Deadline miss by Process5 at time 240
+Process P9 finishes execution at time 249.
+Process P5 starts execution at time 249.
+Deadline miss by Process1 at time 250
+Deadline miss by Process2 at time 250
+Process P5 is preempted by Process P9 at time 252. Remaining processing time:13
+Process P9 starts execution at time 252
+Deadline miss by Process8 at time 260
+Process P9 finishes execution at time 267.
+Process P5 resumes execution at time 267.
+Deadline miss by Process5 at time 270
+Process P5 starts execution at time 270.
+Deadline miss by Process7 at time 275
+Deadline miss by Process3 at time 280
+Deadline miss by Process6 at time 280
+Process P5 finishes execution at time 286.
+Process P1 starts execution at time 286.
+Deadline miss by Process1 at time 300
+Deadline miss by Process2 at time 300
+Deadline miss by Process10 at time 300
+Process P2 starts execution at time 300.
+Deadline miss by Process8 at time 325
+Deadline miss by Process7 at time 330
+Process P2 finishes execution at time 335.
+Process P1 starts execution at time 335.
+Deadline miss by Process1 at time 350
+Deadline miss by Process3 at time 350
+Deadline miss by Process6 at time 350
+Process P1 starts execution at time 350.
+Process P1 finishes execution at time 370.
+Process P2 starts execution at time 370.
+Deadline miss by Process7 at time 385
+Deadline miss by Process8 at time 390
+Deadline miss by Process2 at time 400
+Deadline miss by Process10 at time 400
+Process P2 starts execution at time 400.
+Deadline miss by Process3 at time 420
+Deadline miss by Process6 at time 420
+Process P2 finishes execution at time 435.
+Process P1 starts execution at time 435.
+Deadline miss by Process7 at time 440
+Deadline miss by Process1 at time 450
+Process P1 starts execution at time 450.
+Deadline miss by Process8 at time 455
+Process P1 finishes execution at time 470.
+Process P2 starts execution at time 470.
+Deadline miss by Process3 at time 490
+Deadline miss by Process6 at time 490
+Deadline miss by Process7 at time 495
+Deadline miss by Process2 at time 500
+Deadline miss by Process10 at time 500
+Process P2 starts execution at time 500.
+Deadline miss by Process8 at time 520
+Process P2 finishes execution at time 535.
+Process P7 starts execution at time 535.
+Deadline miss by Process7 at time 550
+Process P7 starts execution at time 550.
+Deadline miss by Process3 at time 560
+Deadline miss by Process6 at time 560
+Deadline miss by Process8 at time 585
+Process P7 finishes execution at time 590.
+Process P8 starts execution at time 590.
+Deadline miss by Process10 at time 600
+Process P8 finishes execution at time 620.
+Process P3 starts execution at time 620.
+Deadline miss by Process3 at time 630
+Deadline miss by Process6 at time 630
+Process P6 starts execution at time 630.
+Process P6 finishes execution at time 680.
+Process P3 starts execution at time 680.
+Deadline miss by Process3 at time 700
+Deadline miss by Process10 at time 700
+Process P3 starts execution at time 700.
+Process P3 finishes execution at time 745.

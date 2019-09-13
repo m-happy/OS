@@ -1,0 +1,48 @@
+[maruthisi@playpen Module11-shm]$ ./shm 
+press any key to do shm_open()
+
+Press any key to do ftruncate
+
+Press any key to do mmap
+
+Press any key to do write
+
+Press any key to do unmap
+
+press any key to exit
+
+[maruthisi@playpen Module11-shm]$ ls -l /dev/shm
+total 0
+-rw-------. 1 maruthisi maruthisi 0 Mar 26 04:37 myshm
+
+[maruthisi@playpen Module11-shm]$ ls -l /dev/shm
+total 0
+-rw-------. 1 maruthisi maruthisi 4096 Mar 26 04:37 myshm
+
+[root@playpen Module02-VAS]# ./pagemap `pidof shm` 7f232236b000
+Big endian? 0
+Vaddr: 0x7f232236b000, Page_size: 4096, Entry_size: 8
+Reading /proc/3012/pagemap at 0x3f91911b58
+[0]0xf1 [1]0x21 [2]0x10 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa1 
+Result: 0xa1800000001021f1
+PFN: 0x1021f1
+
+[maruthisi@playpen Module11-shm]$ #before write
+[maruthisi@playpen Module11-shm]$ xxd /dev/shm/myshm 
+00000000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+...
+00000fe0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000ff0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+
+[maruthisi@playpen Module11-shm]$ #after write
+[maruthisi@playpen Module11-shm]$ xxd /dev/shm/myshm 
+00000000: 4142 4344 4546 4748 494a 4b4c 4d4e 4f50  ABCDEFGHIJKLMNOP
+00000010: 5152 5354 5556 5758 595a 4142 4344 4546  QRSTUVWXYZABCDEF
+00000020: 4748 494a 4b4c 4d4e 4f50 5152 5354 5556  GHIJKLMNOPQRSTUV
+...
+00000fe0: 494a 4b4c 4d4e 4f50 5152 5354 5556 5758  IJKLMNOPQRSTUVWX
+00000ff0: 595a 4142 4344 4546 4748 494a 4b4c 4d4e  YZABCDEFGHIJKLMN
+
+

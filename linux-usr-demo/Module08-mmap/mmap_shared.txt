@@ -1,0 +1,89 @@
+[maruthisi@playpen Module08-mmap]$ truncate -s 1M 1mfile
+
+[maruthisi@playpen Module08-mmap]$ ls -l 1mfile 
+-rw-rw-r--. 1 maruthisi maruthisi 1048576 Mar 26 05:08 1mfile
+
+[maruthisi@playpen Module08-mmap]$ stat 1mfile 
+  File: 1mfile
+  Size: 1048576   	Blocks: 0          IO Block: 4096   regular file
+Device: 808h/2056d	Inode: 19104306    Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/maruthisi)   Gid: ( 1000/maruthisi)
+Context: unconfined_u:object_r:unlabeled_t:s0
+Access: 2018-03-26 05:08:38.953581243 +0530
+Modify: 2018-03-26 05:08:38.954581241 +0530
+Change: 2018-03-26 05:08:38.954581241 +0530
+ Birth: -
+
+[maruthisi@playpen Module08-mmap]$ xxd 1mfile | head -3
+00000000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+[maruthisi@playpen Module08-mmap]$ xxd 1mfile | tail -3
+000fffd0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000fffe0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000ffff0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+
+[maruthisi@playpen Module08-mmap]$ ./mmap_shared 
+Press any key to do mmap
+
+Press any key to do write
+
+Press any key to do unmap
+
+Press any key to exit
+
+[maruthisi@playpen Module08-mmap]$
+
+
+After mmap() before writing
+
+[maruthisi@playpen Module08-mmap]$ xxd 1mfile | head -3
+00000000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+[maruthisi@playpen Module08-mmap]$ xxd 1mfile | tail -3
+000fffd0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000fffe0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000ffff0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+
+
+[root@playpen Module02-VAS]# ./pagemap `pidof mmap_shared` 7f44ee8c4000
+Big endian? 0
+Vaddr: 0x7f44ee8c4000, Page_size: 4096, Entry_size: 8
+Reading /proc/4344/pagemap at 0x3fa2774620
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+
+After mmap'd write
+
+[maruthisi@playpen Module08-mmap]$ xxd 1mfile | head -3
+00000000: 4142 4344 4546 4748 494a 4b4c 4d4e 4f50  ABCDEFGHIJKLMNOP
+00000010: 5152 5354 5556 5758 595a 4142 4344 4546  QRSTUVWXYZABCDEF
+00000020: 4748 494a 4b4c 4d4e 4f50 5152 5354 5556  GHIJKLMNOPQRSTUV
+[maruthisi@playpen Module08-mmap]$ xxd 1mfile | tail -3
+000fffd0: 4142 4344 4546 4748 494a 4b4c 4d4e 4f50  ABCDEFGHIJKLMNOP
+000fffe0: 5152 5354 5556 5758 595a 4142 4344 4546  QRSTUVWXYZABCDEF
+000ffff0: 4748 494a 4b4c 4d4e 4f50 5152 5354 5556  GHIJKLMNOPQRSTUV
+
+[maruthisi@playpen Module08-mmap]$ stat 1mfile 
+  File: 1mfile
+  Size: 1048576   	Blocks: 2048       IO Block: 4096   regular file
+Device: 808h/2056d	Inode: 19104306    Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/maruthisi)   Gid: ( 1000/maruthisi)
+Context: unconfined_u:object_r:unlabeled_t:s0
+Access: 2018-03-26 05:14:03.833883511 +0530
+Modify: 2018-03-26 05:13:22.477967113 +0530
+Change: 2018-03-26 05:13:22.477967113 +0530
+ Birth: -
+
+[root@playpen Module02-VAS]# ./pagemap `pidof mmap_shared` 7f44ee8c4000
+Big endian? 0
+Vaddr: 0x7f44ee8c4000, Page_size: 4096, Entry_size: 8
+Reading /proc/4344/pagemap at 0x3fa2774620
+[0]0xf2 [1]0x24 [2]0xd [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa1 
+Result: 0xa1800000000d24f2
+PFN: 0xd24f2
+
+

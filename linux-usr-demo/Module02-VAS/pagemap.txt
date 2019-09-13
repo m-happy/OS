@@ -1,0 +1,630 @@
+[maruthisi@playpen Module2]$ ./sample 
+Hello
+
+[maruthisi@playpen Module2]$ pidof sample
+4432
+
+[maruthisi@playpen Module2]$ cat /proc/`pidof sample`/maps
+00400000-00401000 r-xp 00000000 08:08 537602849                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module2/sample
+00600000-00601000 r--p 00000000 08:08 537602849                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module2/sample
+00601000-00602000 rw-p 00001000 08:08 537602849                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module2/sample
+01dc9000-01dea000 rw-p 00000000 00:00 0                                  [heap]
+7f3d74939000-7f3d74b00000 r-xp 00000000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f3d74b00000-7f3d74d00000 ---p 001c7000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f3d74d00000-7f3d74d04000 r--p 001c7000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f3d74d04000-7f3d74d06000 rw-p 001cb000 08:06 101130799                  /usr/lib64/libc-2.25.so
+7f3d74d06000-7f3d74d0a000 rw-p 00000000 00:00 0 
+7f3d74d0a000-7f3d74d31000 r-xp 00000000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7f3d74f0f000-7f3d74f12000 rw-p 00000000 00:00 0 
+7f3d74f2e000-7f3d74f30000 rw-p 00000000 00:00 0 
+7f3d74f30000-7f3d74f31000 r--p 00026000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7f3d74f31000-7f3d74f33000 rw-p 00027000 08:06 101130590                  /usr/lib64/ld-2.25.so
+7ffdd332e000-7ffdd334f000 rw-p 00000000 00:00 0                          [stack]
+7ffdd33c4000-7ffdd33c6000 r--p 00000000 00:00 0                          [vvar]
+7ffdd33c6000-7ffdd33c8000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+[maruthisi@playpen Module2]$ cat /proc/`pidof sample`/status
+Name:	sample
+Umask:	0002
+State:	S (sleeping)
+Tgid:	4432
+Ngid:	0
+Pid:	4432
+PPid:	2544
+TracerPid:	0
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+FDSize:	256
+Groups:	1000 
+NStgid:	4432
+NSpid:	4432
+NSpgid:	4432
+NSsid:	2544
+VmPeak:	    4388 kB
+VmSize:	    4388 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	     704 kB
+VmRSS:	     704 kB
+RssAnon:	      68 kB
+RssFile:	     636 kB
+RssShmem:	       0 kB
+VmData:	     188 kB
+VmStk:	     132 kB
+VmExe:	       4 kB
+VmLib:	    1984 kB
+VmPTE:	      32 kB
+VmPMD:	      12 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+Threads:	1
+SigQ:	0/14857
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000000000
+SigCgt:	0000000000000000
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Cpus_allowed:	f
+Cpus_allowed_list:	0-3
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	1
+nonvoluntary_ctxt_switches:	0
+
+[root@playpen Module2]# cat /proc/4432/smaps
+00400000-00401000 r-xp 00000000 08:08 537602849                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module2/sample
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         4 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me dw sd 
+00600000-00601000 r--p 00000000 08:08 537602849                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module2/sample
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd mr mw me dw ac sd 
+00601000-00602000 rw-p 00001000 08:08 537602849                          /mnt/MyDrive/Shelf/AllCode/Maruthi/lsp-c/99_linuxsysprog/Module2/sample
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me dw ac sd 
+01dc9000-01dea000 rw-p 00000000 00:00 0                                  [heap]
+Size:                132 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac sd 
+7f3d74939000-7f3d74b00000 r-xp 00000000 08:06 101130799                  /usr/lib64/libc-2.25.so
+Size:               1820 kB
+Rss:                1044 kB
+Pss:                  22 kB
+Shared_Clean:       1044 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:         1044 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f3d74b00000-7f3d74d00000 ---p 001c7000 08:06 101130799                  /usr/lib64/libc-2.25.so
+Size:               2048 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me sd 
+7f3d74d00000-7f3d74d04000 r--p 001c7000 08:06 101130799                  /usr/lib64/libc-2.25.so
+Size:                 16 kB
+Rss:                  16 kB
+Pss:                  16 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        16 kB
+Referenced:           16 kB
+Anonymous:            16 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac sd 
+7f3d74d04000-7f3d74d06000 rw-p 001cb000 08:06 101130799                  /usr/lib64/libc-2.25.so
+Size:                  8 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac sd 
+7f3d74d06000-7f3d74d0a000 rw-p 00000000 00:00 0 
+Size:                 16 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac sd 
+7f3d74d0a000-7f3d74d31000 r-xp 00000000 08:06 101130590                  /usr/lib64/ld-2.25.so
+Size:                156 kB
+Rss:                 152 kB
+Pss:                   6 kB
+Shared_Clean:        152 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          152 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me dw sd 
+7f3d74f0f000-7f3d74f12000 rw-p 00000000 00:00 0 
+Size:                 12 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac sd 
+7f3d74f2e000-7f3d74f30000 rw-p 00000000 00:00 0 
+Size:                  8 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac sd 
+7f3d74f30000-7f3d74f31000 r--p 00026000 08:06 101130590                  /usr/lib64/ld-2.25.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd mr mw me dw ac sd 
+7f3d74f31000-7f3d74f33000 rw-p 00027000 08:06 101130590                  /usr/lib64/ld-2.25.so
+Size:                  8 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me dw ac sd 
+7ffdd332e000-7ffdd334f000 rw-p 00000000 00:00 0                          [stack]
+Size:                132 kB
+Rss:                  12 kB
+Pss:                  12 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        12 kB
+Referenced:           12 kB
+Anonymous:            12 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me gd ac 
+7ffdd33c4000-7ffdd33c6000 r--p 00000000 00:00 0                          [vvar]
+Size:                  8 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd mr pf io de dd sd 
+7ffdd33c6000-7ffdd33c8000 r-xp 00000000 00:00 0                          [vdso]
+Size:                  8 kB
+Rss:                   4 kB
+Pss:                   0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me de sd 
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+Size:                  4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex 
+
+[maruthisi@playpen Module2]$ gcc -o pagemap pagemap.c
+
+[root@playpen Module2]# chown root:root pagemap
+[root@playpen Module2]# chmod u+s pagemap
+
+[maruthisi@playpen Module2]$ ls -l pagemap
+-rwsrwxr-x. 1 root root 13296 Mar 25 08:30 pagemap
+
+Text segment it is working
+
+[root@playpen Module2]# ./pagemap 4432 00400000
+Big endian? 0
+Vaddr: 0x400000, Page_size: 4096, Entry_size: 8
+Reading /proc/4432/pagemap at 0x2000
+[0]0x53 [1]0x43 [2]0xb [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa1 
+Result: 0xa1800000000b4353
+PFN: 0xb4353
+
+Literal it is working
+
+[root@playpen Module2]# ./pagemap 4432 00600000
+Big endian? 0
+Vaddr: 0x600000, Page_size: 4096, Entry_size: 8
+Reading /proc/4432/pagemap at 0x3000
+[0]0x97 [1]0x9c [2]0x9 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000099c97
+PFN: 0x99c97
+
+
+Heap it is working
+
+[root@playpen Module2]# ./pagemap 4432 01dc9000
+Big endian? 0
+Vaddr: 0x1dc9000, Page_size: 4096, Entry_size: 8
+Reading /proc/4432/pagemap at 0xee48
+[0]0x6c [1]0x18 [2]0x1 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x818000000001186c
+PFN: 0x1186c
+
+
+For Initialized data segment also it is working
+
+[root@playpen Module2]# ./pagemap 4432 00601000
+Big endian? 0
+Vaddr: 0x601000, Page_size: 4096, Entry_size: 8
+Reading /proc/4432/pagemap at 0x3008
+[0]0x4a [1]0x31 [2]0xc [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x81800000000c314a
+PFN: 0xc314a
+
+For Libc it is working
+
+[root@playpen Module2]# ./pagemap 4432 7f3d74939000
+Big endian? 0
+Vaddr: 0x7f3d74939000, Page_size: 4096, Entry_size: 8
+Reading /proc/4432/pagemap at 0x3f9eba49c8
+[0]0xb6 [1]0xa5 [2]0x8 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa08000000008a5b6
+PFN: 0x8a5b6
+
+
+For ld library it is working
+
+[root@playpen Module2]# ./pagemap 4432 7f3d74d0a000
+Big endian? 0
+Vaddr: 0x7f3d74d0a000, Page_size: 4096, Entry_size: 8
+Reading /proc/4432/pagemap at 0x3f9eba6850
+[0]0x7e [1]0xd5 [2]0x8 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa08000000008d57e
+PFN: 0x8d57e
+
+
+For stack it is not working (possibly because of lazy mapping)
+We could try a demand paged address by printing dirty local variable's
+address and try doing pagemap of that address.
+
+[root@playpen Module2]# ./pagemap 4432 7ffdd332e000
+Big endian? 0
+Vaddr: 0x7ffdd332e000, Page_size: 4096, Entry_size: 8
+Reading /proc/4432/pagemap at 0x3ffee99970
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x0 [7]0x0 
+Result: 0x0
+Page not present
+
+
+For vvar it is not working
+
+[root@playpen Module2]# ./pagemap 4432 7ffdd33c4000
+Big endian? 0
+Vaddr: 0x7ffdd33c4000, Page_size: 4096, Entry_size: 8
+Reading /proc/4432/pagemap at 0x3ffee99e20
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+For vdso it is working
+
+[root@playpen Module2]# ./pagemap 4432 7ffdd33c6000
+Big endian? 0
+Vaddr: 0x7ffdd33c6000, Page_size: 4096, Entry_size: 8
+Reading /proc/4432/pagemap at 0x3ffee99e30
+[0]0x9 [1]0x9d [2]0x5 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000059d09
+PFN: 0x59d09
+
+For vsyscall it is not working
+
+[root@playpen Module2]# ./pagemap 4432 ffffffffff600000
+Big endian? 0
+Vaddr: 0x7fffffffffffffff, Page_size: 4096, Entry_size: 8
+Reading /proc/4432/pagemap at 0x3ffffffffffff8
+
+Reached end of the file
+
+For mmap (shared) it is working (only after page frame is assigned)
+
+[root@playpen Module02-VAS]# ./pagemap `pidof mmap_shared` 7f44ee8c4000
+Big endian? 0
+Vaddr: 0x7f44ee8c4000, Page_size: 4096, Entry_size: 8
+Reading /proc/4344/pagemap at 0x3fa2774620
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0
+Result: 0x80000000000000
+Page not present
+
+[root@playpen Module02-VAS]# ./pagemap `pidof mmap_shared` 7f44ee8c4000
+Big endian? 0
+Vaddr: 0x7f44ee8c4000, Page_size: 4096, Entry_size: 8
+Reading /proc/4344/pagemap at 0x3fa2774620
+[0]0xf2 [1]0x24 [2]0xd [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa1
+Result: 0xa1800000000d24f2
+PFN: 0xd24f2
+
+For mmap (priv) it is working (only after page frame is assigned)
+
+[root@playpen Module02-VAS]# ./pagemap `pidof mmap_private` 7f0067a23000
+Big endian? 0
+Vaddr: 0x7f0067a23000, Page_size: 4096, Entry_size: 8
+Reading /proc/5004/pagemap at 0x3f8033d118
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0
+Result: 0x80000000000000
+Page not present
+
+[root@playpen Module02-VAS]# ./pagemap `pidof mmap_private` 7f0067a23000
+Big endian? 0
+Vaddr: 0x7f0067a23000, Page_size: 4096, Entry_size: 8
+Reading /proc/5004/pagemap at 0x3f8033d118
+[0]0x1b [1]0xf [2]0x10 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81
+Result: 0x8180000000100f1b
+PFN: 0x100f1b
+
+For mmap (anon/priv) it is working (only after page frame is assigned)
+
+[root@playpen Module02-VAS]# ./pagemap `pidof mmap_private_anon` 7f1a25abe000
+Big endian? 0
+Vaddr: 0x7f1a25abe000, Page_size: 4096, Entry_size: 8
+Reading /proc/6855/pagemap at 0x3f8d12d5f0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+[root@playpen Module02-VAS]# ./pagemap `pidof mmap_private_anon` 7f1a25abe000
+Big endian? 0
+Vaddr: 0x7f1a25abe000, Page_size: 4096, Entry_size: 8
+Reading /proc/6855/pagemap at 0x3f8d12d5f0
+[0]0x69 [1]0x2f [2]0x11 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000112f69
+PFN: 0x112f69
+
+[root@playpen Module02-VAS]# ./pagemap `pidof mmap_private_anon` 7f1a25abe000
+Big endian? 0
+Vaddr: 0x7f1a25abe000, Page_size: 4096, Entry_size: 8
+Reading /proc/6855/pagemap at 0x3f8d12d5f0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x0 [7]0x0 
+Result: 0x0
+Page not present
+
+For posix shm it is working (only after page frame is assigned)
+
+[root@playpen Module02-VAS]# ./pagemap `pidof mmap_private_anon` 7f1a25abe000
+Big endian? 0
+Vaddr: 0x7f1a25abe000, Page_size: 4096, Entry_size: 8
+Reading /proc/6855/pagemap at 0x3f8d12d5f0
+[0]0x69 [1]0x2f [2]0x11 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000112f69
+PFN: 0x112f69
+
+
